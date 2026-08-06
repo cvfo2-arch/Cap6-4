@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Anuncie seu imóvel - AluguelJá</title>
+</head>
+<body>
+
+  <header>
+    <h1>AluguelJá</h1>
+    <h2>Anuncie seu imóvel para locação</h2>
+    <p>Preencha as informações para publicar seu anúncio em nossa plataforma.</p>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+
+      <!-- 1. ANÚNCIO -->
+      <fieldset>
+        <legend>Anúncio</legend>
+
+        <label for="titulo">Título do anúncio * (máx. 80 caracteres)</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ex.: Apto 2 quartos, Jatiúca, próximo à praia"
+               maxlength="80" required>
+
+        <label for="tipo">Tipo de imóvel *</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="apartamento">Apartamento</option>
+          <option value="casa">Casa</option>
+          <option value="kitnet">Kitnet</option>
+          <option value="studio">Studio</option>
+          <option value="cobertura">Cobertura</option>
+          <option value="comercial">Ponto Comercial</option>
+        </select>
+
+        <label for="disponivel">Disponível a partir de</label>
+        <input type="date" id="disponivel" name="disponivel">
+      </fieldset>
+
+      <!-- 2. LOCALIZAÇÃO -->
+      <fieldset>
+        <legend>Localização</legend>
+
+        <label for="endereco">Endereço completo *</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade" required>
+
+        <label for="cep">CEP *</label>
+        <input type="text" id="cep" name="cep" placeholder="00000-000"
+               pattern="\d{5}-?\d{3}" maxlength="9" required>
+      </fieldset>
+
+      <!-- 3. CARACTERÍSTICAS -->
+      <fieldset>
+        <legend>Características</legend>
+
+        <label for="quartos">Quartos *</label>
+        <input type="number" id="quartos" name="quartos" min="0" value="2" required>
+
+        <label for="banheiros">Banheiros *</label>
+        <input type="number" id="banheiros" name="banheiros" min="0" value="1" required>
+
+        <label for="area">Área (m²) *</label>
+        <input type="number" id="area" name="area" min="0" value="65" required>
+
+        <label for="valor">Valor do aluguel *</label>
+        <input type="number" id="valor" name="valor" min="0" step="0.01" placeholder="R$ 1.500,00" required>
+
+        <p>Aceita animais de estimação?</p>
+        <label><input type="radio" name="pets" value="sim"> Sim</label>
+        <label><input type="radio" name="pets" value="nao"> Não</label>
+        <label><input type="radio" name="pets" value="combinar"> A combinar</label>
+
+        <p>Comodidades</p>
+        <label><input type="checkbox" name="comodidades" value="garagem"> Garagem</label>
+        <label><input type="checkbox" name="comodidades" value="piscina"> Piscina</label>
+        <label><input type="checkbox" name="comodidades" value="academia"> Academia</label>
+        <label><input type="checkbox" name="comodidades" value="portaria"> Portaria 24h</label>
+        <label><input type="checkbox" name="comodidades" value="elevador"> Elevador</label>
+        <label><input type="checkbox" name="comodidades" value="mobiliado"> Mobiliado</label>
+      </fieldset>
+
+      <!-- 4. MÍDIA E DESCRIÇÃO -->
+      <fieldset>
+        <legend>Mídia e Descrição</legend>
+
+        <label for="fotos">Fotos do imóvel *</label>
+        <input type="file" id="fotos" name="fotos" accept="image/png, image/jpeg" multiple required>
+
+        <label for="descricao">Descrição detalhada</label>
+        <textarea id="descricao" name="descricao" rows="4"
+                  placeholder="Descreva o imóvel, condições, diferenciais, regras do condomínio..."></textarea>
+      </fieldset>
+
+      <button type="submit">Publicar Anúncio</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AluguelJá</p>
+  </footer>
+
+</body>
+</html>
